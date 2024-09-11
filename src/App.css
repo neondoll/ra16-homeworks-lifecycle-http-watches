@@ -1,0 +1,79 @@
+#root { max-width: 1280px; margin: 0 auto; padding: 2rem; text-align: center; }
+
+.world-clock {}
+
+.world-clock__form,
+.world-clock__clocks { width: 100%; }
+
+.world-clock__clocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(116px, 1fr));
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.world-clock__clock {}
+
+.world-clock-form { display: flex; align-items: flex-end; column-gap: 16px; }
+
+.world-clock-form__group {}
+
+.world-clock-form__label,
+.world-clock-form__input {display: block; }
+
+.world-clock-form__label { font-weight: 500; }
+
+.world-clock-form__input,
+.world-clock-form__btn {
+    padding: 0.6em 1.2em;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: border-color 0.25s;
+}
+
+.world-clock-form__input:hover,
+.world-clock-form__btn:hover { border-color: #646cff; }
+
+.world-clock-form__input:focus,
+.world-clock-form__input:focus-visible,
+.world-clock-form__btn:focus,
+.world-clock-form__btn:focus-visible { outline: 4px auto -webkit-focus-ring-color; }
+
+.world-clock-form__input { margin-top: 8px; }
+
+.world-clock-form__btn { font-weight: 500; cursor: pointer; }
+
+.clock { position: relative; }
+
+.clock__title { font-weight: 500; }
+
+.clock__time {}
+
+.clock__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 5px;
+    font-weight: 500;
+    line-height: 1;
+    background-color: #1a1a1a;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    transition: border-color 0.25s;
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+.clock__btn:hover { border-color: #646cff; }
+
+.clock__btn:focus,
+.clock__btn:focus-visible { outline: 4px auto -webkit-focus-ring-color; }
+
+@media (prefers-color-scheme: light) {
+    .world-clock-form__input,
+    .world-clock-form__btn { background-color: #f9f9f9; }
+
+    .clock__btn { background-color: #f9f9f9; }
+}
